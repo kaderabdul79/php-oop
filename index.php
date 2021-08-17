@@ -1,9 +1,22 @@
 <?php
 
 class BankAccount{
-   public function display(){
-       echo "learning php OOP";
+    public $a=1;
+    public function display(){
+       echo "learning php OOP"."<br>";
+       echo $this->a."<br>";
+    //    echo $this->a++."<br>";
+    //     echo $this->a."<br>";
+       echo ++$this->a."<br>";
+   }
+
+   public function cal(){
+    echo $this->a--."<br>";
    }
 }
-$account = new BankAccount;
-$account->display();
+$account1 = new BankAccount;
+$account2 = new BankAccount;
+
+$account1->display();
+$account2->cal();
+echo $account2->a;
