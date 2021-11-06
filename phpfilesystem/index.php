@@ -8,8 +8,7 @@ if (!file_exists($filename)) {
 
 $f = fopen($filename, 'r');
 if ($f) {
-    echo $f;
-    
-    echo 'The file ' . $filename . ' is open';
+    $contents = fread($f, filesize($filename));
     fclose($f);
+    echo nl2br($contents);
 }
